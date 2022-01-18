@@ -54,4 +54,4 @@ jobs:
           chmod +x nydus-snapshotter/*
           tar cf - nydus-snapshotter | gzip > ${tarball}
           echo "uploading ${tarball} for tag $tag ..."
-          GITHUB_TOKEN=${{ secrets.HUB_UPLOAD_TOKEN }} hub release create -m "Nydus Image Service $tag" -m "Nydus-snapshotter $tag release" -a "${tarball}" "$tag"
+          GITHUB_TOKEN=${{ secrets.HUB_UPLOAD_TOKEN }} hub release create -m "Nydus-snapshotter $tag" -m "Nydus-snapshotter $tag release" -a "${tarball}" "$tag"
