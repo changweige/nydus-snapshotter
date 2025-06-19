@@ -32,7 +32,7 @@ rm -rf containerd-2.1.1-linux-amd64.tar.gz /tmp/containerd
 
 RUN wget https://github.com/TomWright/dasel/releases/download/v2.8.1/dasel_linux_amd64 && install -D -m 755 dasel_linux_amd64 /usr/local/bin/dasel
 
-COPY misc/snapshotter/setup.sh /setup.sh
+COPY setup.sh /setup.sh
 RUN chmod +x /setup.sh
 
 WORKDIR /nydus-snapshotter
