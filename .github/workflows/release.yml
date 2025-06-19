@@ -147,8 +147,8 @@ jobs:
       - name: build and push nydus-snapshotter image
         uses: docker/build-push-action@v5
         with:
-          context: misc/snapshotter
-          file: misc/snapshotter/Dockerfile
+          context: .
+          file: docker/Dockerfile
           push: true
           platforms: ${{ matrix.build-os }}/${{ matrix.build-arch }}
           provenance: false
