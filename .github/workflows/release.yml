@@ -148,7 +148,7 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           context: misc/snapshotter
-          file: misc/snapshotter/Dockerfile
+          file: docker/Dockerfile
           push: true
           platforms: ${{ matrix.build-os }}/${{ matrix.build-arch }}
           provenance: false
